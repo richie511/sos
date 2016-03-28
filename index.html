@@ -6,14 +6,19 @@
 <script src="jquery-1.10.2.min.js"></script>
 <script src="jquery.mobile-1.4.5.min.js"></script>
 	<style>
-	  html { 
-    overflow-y: scroll;
-    -webkit-font-smoothing: antialiased; }
-
   body {
   	background: #f13511; }
 body,html {
 overflow-x:hidden;overflow-y:hidden;
+	  
+    -webkit-font-smoothing: antialiased; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    -webkit-user-select: none; 
+    -webkit-touch-callout: none; 
+    -webkit-tap-highlight: rgba(0,0,0,0); 
     background-color: #f13511;
     /* Chrome, Safari, Opera */
     -webkit-animation-name: example;
@@ -332,7 +337,7 @@ overflow-x:hidden;overflow-y:hidden;
 	});
 	</script>
 </head>
-<body>
+<body oncontextmenu="return false" ondragstart="return false" onselect="return false">
   <div id="container">    
 	<div id="naga">Hallo</div>
     <div id="main">
