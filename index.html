@@ -320,7 +320,17 @@ overflow-x:hidden;overflow-y:hidden;
 	display:none;
 }
 	</style>
-	
+	<script>
+	$(function(){
+		$( "#content" ).bind( "taphold", tapholdHandler );
+		function tapholdHandler( event ){
+			$( event.target ).addClass( "taphold" );
+			setInterval(function(){
+			$("#naga").show();
+			},2000);
+		}
+	});
+	</script>
 </head>
 <body>
   <div id="container">    
@@ -337,16 +347,6 @@ overflow-x:hidden;overflow-y:hidden;
     </div>
   
   </div>
-  <script>
-	$(function(){
-		$( "div.box" ).bind( "taphold", tapholdHandler );
-		function tapholdHandler( event ){
-			$( event.target ).addClass( "taphold" );
-			setInterval(function(){
-			$("#naga").show();
-			},2000);
-		}
-	});
-	</script>
+  
 </body>
 </html>
